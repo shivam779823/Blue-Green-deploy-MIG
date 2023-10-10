@@ -118,7 +118,7 @@ module "green-mig" {
     subnetwork    = "projects/${var.project_id}/regions/${var.region}/subnetworks/trustsubnet-001"
     scope         = ["https://www.googleapis.com/auth/cloud-platform"]
     service_account = var.service_account
-    startup_sript = templatefile("./script.sh", { color = "Green" } , { version = "v1"},{ ns = "Dev"})
+    startup_sript = templatefile("./script.sh", { color = "Green"  ,  version = "v1", ns = "Dev"})
     mig_name        = "green"
     min_replicas    = 1
     max_replicas    = 2
