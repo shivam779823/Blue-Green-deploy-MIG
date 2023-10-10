@@ -145,7 +145,7 @@ module "blue-mig" {
     subnetwork    = "projects/${var.project_id}/regions/${var.region}/subnetworks/trustsubnet-001"
     scope         = ["https://www.googleapis.com/auth/cloud-platform"]
     service_account = var.service_account
-    startup_sript = templatefile("./script.sh", { color = "Blue" } , { version = "v1"},{ ns = "Dev"})
+    startup_sript = templatefile("./script.sh", { color = "Blue"  ,  version = "v1", ns = "Dev"})
 
     mig_name        = "blue"
     min_replicas    = 1
